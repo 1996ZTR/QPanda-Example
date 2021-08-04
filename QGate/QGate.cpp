@@ -8,7 +8,8 @@ int main(void)
 	QVec qubits = { q[0],q[1] };
 
 	auto prog = createEmptyQProg();
-	prog << H(q[0])
+	prog<< H(q)
+		<< H(q[0])
 		<< H(q[1])
 		<< H(q[0]).dagger()
 		<< X(q[2]).control(qubits);
